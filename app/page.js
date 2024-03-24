@@ -70,7 +70,7 @@ export default function Home() {
         <CountDown />
         <div className=' text-center  bg-[rgba(255,255,255,0.3)] p-3 rounded-lg'>
           <h1 className='text-xl'>Құрметті</h1>
-          <p className='text-sm'>ағайын-туыс, құда-жекжат, дос жарандар, ұлымыз бен келініміз өз бақытын тапты, сол бақытың куәсі болуға шақырамыз!</p>
+          <p className='text-sm'>Ағайын-туыс, құда-жекжат, дос жарандар, ұлымыз бен келініміз өз бақытын тапты, сол бақытың куәсі болуға шақырамыз!</p>
           <p>22.06.2024 | 17:00 | сенбі</p>
         </div>
         
@@ -85,7 +85,7 @@ export default function Home() {
 
     <div className='w-[80%] mx-auto text-center relative mb-[200px] border-white border-[1px] '>
         <p className={`${wg.className} text-[60px] m-0 absolute top-0 right-10`}>Бекзатпен Венеранын </p>
-        <p className=' absolute top-16'>отау құру тоына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</p>
+        <p className=' absolute top-16'>Отау құру тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</p>
     </div>
 
     <div className='w-[80%] mx-auto mb-16'>
