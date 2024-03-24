@@ -3,11 +3,12 @@ import dynamic from 'next/dynamic';
 import { YMaps, Map, Button, Placemark } from '@pbe/react-yandex-maps';
 import { useState } from 'react';
 import localFont from 'next/font/local';
+import { motion } from 'framer-motion'
 
 const wg = localFont({
   src: [
     {
-      path: '../public/WonderGardenScript-Regular.woff2',
+      path: '../public/cirpnova-d.ttf',
       weight: '400',
       style: 'normal',
     },
@@ -22,13 +23,6 @@ export default function Home() {
 
   const [name, setName] = useState('')
   const [status, setStatus] = useState('')
-
-  const [isConfetti, setIsConfetti] = useState(false)
-
-  const Confetties = () => {
-    setStatus('ИӘ, КЕЛЕМІН')
-    setIsConfetti(true)
-  }
 
   const Vote = async () => {
     try {
@@ -63,32 +57,32 @@ export default function Home() {
     
       <img src='/stars.png' alt='stars' className=' absolute'/>
       <div className='flex flex-col absolute top-0 w-[80%] justify-between h-[110%]'>
-        <div className='text-left relative'>
-          <p className={`${wg.className} text-[60px] m-0 absolute top-0`}>Бекзат and Венера</p>
+        <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} exit={{ opacity: 0, y: -100 }} transition={{ duration: 1 }}  className='text-left relative'>
+          <p className={`${wg.className} text-2xl mt-6 m-0 absolute top-0`}>Бекзат and Венера</p>
           <p className=' absolute top-16'>Приглашаем на <br /> свадьбу <br />22.06.2024</p>
-        </div>
+        </motion.div>
         <CountDown />
-        <div className=' text-center  bg-[rgba(255,255,255,0.3)] p-3 rounded-lg'>
+        <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} exit={{ opacity: 0, y: -100 }} transition={{ duration: 1 }} className=' text-center  bg-[rgba(255,255,255,0.3)] p-3 rounded-lg'>
           <h1 className='text-xl'>Құрметті</h1>
           <p className='text-sm'>Ағайын-туыс, құда-жекжат, дос жарандар, ұлымыз бен келініміз өз бақытын тапты, сол бақытың куәсі болуға шақырамыз!</p>
           <p>22.06.2024 | 17:00 | сенбі</p>
-        </div>
+        </motion.div>
         
       </div>
     </main>
 
     <div className='relative flex justify-center mb-[400px]'>
-        <img src='/3.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute rotate-[25deg] top-10 right-10 h-[200px]'/>
-        <img src='/2.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute -rotate-[25deg] top-10 left-10 h-[200px]'/>
-        <img src='/1.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute h-[250px] '/>
+        <motion.img initial={{ rotate: 0, x: -100, opacity: 0 }} whileInView={{ opacity: 1, rotate: 25, x: 0 }} transition={{ duration: 1 }} src='/3.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute rotate-[25deg] top-10 right-10 h-[200px]'/>
+        <motion.img initial={{ rotate: 0, x: 100, opacity: 0 }} whileInView={{ opacity: 1, rotate: -25, x: 0  }} transition={{ duration: 1 }} src='/2.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute -rotate-[25deg] top-10 left-10 h-[200px]'/>
+        <motion.img src='/1.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute h-[250px] '/>
     </div>
 
-    <div className='w-[80%] mx-auto text-center relative mb-[200px] border-white border-[1px] '>
-        <p className={`${wg.className} text-[60px] m-0 absolute top-0 right-10`}>Бекзатпен Венеранын </p>
+    <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: -100 }} exit={{ opacity: 0, y: -100 }} transition={{ duration: 1 }} className='w-[80%] mx-auto text-center relative mb-[200px] border-white border-[1px] '>
+        <p className={`${wg.className} text-2xl mt-6 m-0 absolute top-0 right-10`}>Бекзатпен Венеранын </p>
         <p className=' absolute top-16'>Отау құру тойына арналған салтанатты ақ дастарханымыздың қадірлі қонағы болуға шақырамыз!</p>
-    </div>
+    </motion.div>
 
-    <div className='w-[80%] mx-auto mb-16'>
+    <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} exit={{ opacity: 0, y: -100 }} transition={{ duration: 1 }}  className='w-[80%] mx-auto mb-16'>
       <h3 className=' font-extrabold text-2xl'>Dress Code | Black Tie</h3>
       <div className=' flex justify-evenly w-[80%] mx-auto py-2'>
         <div className='h-[25px] w-[25px] rounded-full bg-[#dddccb]'></div>
@@ -97,10 +91,10 @@ export default function Home() {
         <div className='h-[25px] w-[25px] rounded-full bg-[#181818]'></div>
       </div>
       <p>Біздің тойға сәйкес киім үлгісін таңдап, айтулы күннің dress code -ын ұстануыңызды сұраймыз!</p>
-    </div>
+    </motion.div>
 
 
-    <div className=' flex flex-col w-[80%] mx-auto mb-[100px] bg-[rgba(255,255,255,0.3)] p-4 rounded-lg'>
+    <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} exit={{ opacity: 0, y: -100 }} transition={{ duration: 1 }}   className=' flex flex-col w-[80%] mx-auto mb-[100px] bg-[rgba(255,255,255,0.3)] p-4 rounded-lg'>
       <p className=' text-xl py-4'>Тойға қатысуыңызды <br /> растауыңызды сұраймыз!</p>
       <input type="text" id="first_name" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-4" placeholder="ФИО" required onChange={(e) => setName(e.target.value)} />
       <div className=' flex flex-col gap-6 justify-between'>
@@ -114,7 +108,7 @@ export default function Home() {
         </div>
       </div>
       <button type='submit' className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800' onClick={Vote}>Растау</button>
-    </div>
+    </motion.div>
 
     <YMaps query={{lang: 'ru_RU', apikey: '536168cc-8dbb-4923-a06f-9a6bd5a9cf15'}}>
       <Map defaultState={{ center: [51.14499045698973, 71.37709503819221], zoom: 19 }} width='100%' height='400px' >
