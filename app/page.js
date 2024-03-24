@@ -78,9 +78,9 @@ export default function Home() {
     </main>
 
     <div className='relative flex justify-center mb-[400px]'>
-        <img src='/3.jpeg' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute rotate-[25deg] top-10 right-10 h-[200px]'/>
-        <img src='/2.jpeg' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute -rotate-[25deg] top-10 left-10 h-[200px]'/>
-        <img src='/1.jpeg' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute h-[250px] '/>
+        <img src='/3.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute rotate-[25deg] top-10 right-10 h-[200px]'/>
+        <img src='/2.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute -rotate-[25deg] top-10 left-10 h-[200px]'/>
+        <img src='/1.JPEG' alt='Section' className='w-auto mx-auto mt-32 rounded-lg absolute h-[250px] '/>
     </div>
 
     <div className='w-[80%] mx-auto text-center relative mb-[200px] border-white border-[1px] '>
