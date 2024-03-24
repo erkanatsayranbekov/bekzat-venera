@@ -4,6 +4,7 @@ import { YMaps, Map, Button, Placemark } from '@pbe/react-yandex-maps';
 import { useState } from 'react';
 import localFont from 'next/font/local';
 import { motion } from 'framer-motion'
+import Confetti from "react-confetti";
 
 const wg = localFont({
   src: [
@@ -23,9 +24,11 @@ export default function Home() {
 
   const [name, setName] = useState('')
   const [status, setStatus] = useState('')
+  const [confetti, setConfetti] = useState(false)
 
   const Vote = async () => {
     try {
+      setConfetti(true)
       const response = await fetch('https://sheetdb.io/api/v1/zu4i3u7qnij0h', {
         method: 'POST',
         headers: {
@@ -41,7 +44,7 @@ export default function Home() {
           ]
         })
       });
-
+      setTimeout(() => setConfetti(false), 5000);
       const data = await response.json();
       console.log(data); // Check response data
     } catch (error) {
@@ -93,8 +96,12 @@ export default function Home() {
       <p>Біздің тойға сәйкес киім үлгісін таңдап, айтулы күннің dress code -ын ұстануыңызды сұраймыз!</p>
     </motion.div>
 
-
-    <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} exit={{ opacity: 0, y: -100 }} transition={{ duration: 1 }}   className=' flex flex-col w-[80%] mx-auto mb-[100px] bg-[rgba(255,255,255,0.3)] p-4 rounded-lg'>
+    <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} exit={{ opacity: 0, y: -100 }} transition={{ duration: 1 }}   className=' flex flex-col w-[80%] mx-auto mb-[100px] bg-[rgba(255,255,255,0.3)] p-4 rounded-lg relative overflow-hidden right-0'>
+      { confetti &&  
+      <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 1 }} className=' absolute top-0'>
+        <Confetti width={window.innerWidth} height={window.innerHeight}/>
+      </motion.div>
+      }
       <p className=' text-xl py-4'>Тойға қатысуыңызды <br /> растауыңызды сұраймыз!</p>
       <input type="text" id="first_name" class=" border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 my-4" placeholder="ФИО" required onChange={(e) => setName(e.target.value)} />
       <div className=' flex flex-col gap-6 justify-between'>
