@@ -42,7 +42,7 @@ function CountDown() {
     
     
     return (
-        <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} exit={{ opacity: 0 }} transition={{ duration: 1 }} className="grid grid-cols-5 sm:text-lg font-['wg'] bg-[rgba(255,255,255,0.3)] p-3 rounded-lg">
+        <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 100 }} exit={{ opacity: 0 }} transition={{ duration: 1 }} className="grid grid-cols-5 sm:text-lg font-['wg'] bg-[rgba(255,255,255,0.3)] p-3 rounded-lg absolute bottom-40 text-white">
             <div className="col-span-1 text-center text-2xl">
                 {weeks}
             </div>
