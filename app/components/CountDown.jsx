@@ -10,7 +10,7 @@ function CountDown() {
     };
 
     const calculateTimeLeft = () => {
-        const difference = + new Date('2024-06-22T00:00:00') - + new Date();
+        const difference = + new Date('2024-06-22T17:00:00') - + new Date();
         let timeLeft = {};
     
         if (difference > 0) {
@@ -59,13 +59,13 @@ function CountDown() {
                 {seconds}
             </div>
             <div className="col-span-1 text-center">
-                {weeks === 1 ? 'Неделя' : 'Недель'}
+                {weeks === 1 ? 'Апта' : 'Апта'}
             </div>
             <div className="col-span-1 text-center">
-                {days === 1 ? 'День' : 'Дней'}
+                {days === 1 ? 'Күн' : 'Күн'}
             </div>
             <div className="col-span-1 text-center">
-                {hours === 1 ? 'Час' : 'Часов'}
+                {hours === 1 ? 'Сағат' : 'Сағат'}
             </div>
             <div className="col-span-1 text-center">
                 {minutes === 1 ? 'Минута' : 'Минут'}
