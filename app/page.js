@@ -127,7 +127,6 @@ export default function Home() {
       <h3 className=' font-extrabold text-2xl'>Dress Code | Black Tie</h3>
       <div className=' flex justify-evenly w-[80%] mx-auto py-2'>
         <div className='h-[25px] w-[25px] rounded-full bg-[#dddccb] border-black border-[1px]'></div>
-        <div className='h-[25px] w-[25px] rounded-full bg-[#b8b0a0] border-black border-[1px]'></div>
         <div className='h-[25px] w-[25px] rounded-full bg-[#96825f] border-black border-[1px]'></div>
         <div className='h-[25px] w-[25px] rounded-full bg-[#181818] border-black border-[1px]'></div>
       </div>
@@ -171,7 +170,7 @@ export default function Home() {
             window.location.href = 'https://drive.google.com/drive/folders/1-Hy5ewQ-aVoQF_XDlRBUnXC02BuDU7Eo'
           }}/>
       <p className=' text-lg font-extrabold'>
-        Фотографиялар
+        Той суреттерін айтулы күннен кейін осы батырма арқылы қарай аласыздар!
       </p>
     </motion.div>
 
